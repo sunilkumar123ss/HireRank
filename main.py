@@ -17,3 +17,9 @@ CATALOG = {
 }
 
 
+def canonical(skill):
+    if not isinstance(skill, str): raise ValueError("skill must be text")
+    key = " ".join(skill.casefold().strip().split())
+    if key not in CATALOG:
+        raise ValueError("unsupported technical skill: " + skill)
+    return CATALOG[key]

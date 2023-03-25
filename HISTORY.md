@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 1 of 19. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 2 of 19. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -13,7 +13,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | Stage | Synthetic date | Change |
 | --- | --- | --- |
 | 1 | 2023-03-04T19:07:35+05:30 | Establish module imports, constants and repository hygiene (present) |
-| 2 | 2023-03-25T18:02:34+05:30 | Normalize the reviewed technical-skill aliases (later stage) |
+| 2 | 2023-03-25T18:02:34+05:30 | Normalize the reviewed technical-skill aliases (present) |
 | 3 | 2023-04-22T10:31:30+05:30 | Explain weighted evidence coverage and missing requirements (later stage) |
 | 4 | 2023-08-20T19:01:19+05:30 | Validate profile identities and preserve input ordering (later stage) |
 | 5 | 2023-09-07T14:22:49+05:30 | Add synthetic fixtures for the documented example (later stage) |
