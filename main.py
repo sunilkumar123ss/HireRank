@@ -58,3 +58,14 @@ def explain(requirements, profile):
             "matched_weight": matched, "total_weight": total, "requirements": rows,
             "missing_required_evidence": [row["skill"] for row in rows if row["required"] and not row["evidence_supplied"]],
             "interpretation": "Coverage of supplied technical evidence only; no hiring decision or candidate ranking."}
+
+
+def evaluate(request):
+    if not isinstance(request, dict) or not isinstance(request.get("profiles"), list):
+        raise ValueError("input needs a profiles list")
+    profiles = request["profiles"]
+    ids = [profile.get("id") if isinstance(profile, dict) else None for profile in profiles]
+    if any(not isinstance(key, str) for key in ids) or len(set(ids)) != len(ids):
+        raise ValueError("profile ids must be unique strings")
+    return {"profiles": [explain(request.get("requirements"), profile) for profile in profiles],
+            "order": "input order preserved", "uses_personal_attributes": False}
