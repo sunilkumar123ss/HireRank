@@ -69,3 +69,14 @@ def evaluate(request):
         raise ValueError("profile ids must be unique strings")
     return {"profiles": [explain(request.get("requirements"), profile) for profile in profiles],
             "order": "input order preserved", "uses_personal_attributes": False}
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--input", type=Path, default=Path(__file__).with_name("example.json"))
+    args = parser.parse_args()
+    try: print(json.dumps(evaluate(json.loads(args.input.read_text())), indent=2))
+    except (ValueError, OSError, TypeError) as exc: parser.error(str(exc))
+
+
+if __name__ == "__main__": main()
