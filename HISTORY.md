@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 7 of 19. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 8 of 19. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -19,7 +19,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 5 | 2023-09-07T14:22:49+05:30 | Add synthetic fixtures for the documented example (present) |
 | 6 | 2023-09-16T19:46:00+05:30 | Expose the command-line interface and default demonstration (present) |
 | 7 | 2023-12-31T18:09:59+05:30 | Cover weighted coverage explains numerator and establish the test harness (present) |
-| 8 | 2024-03-01T12:21:04+05:30 | Cover aliases match canonical requirement (later stage) |
+| 8 | 2024-03-01T12:21:04+05:30 | Cover aliases match canonical requirement (present) |
 | 9 | 2024-03-09T15:10:33+05:30 | Cover missing required evidence is explicit (later stage) |
 | 10 | 2024-03-13T18:41:33+05:30 | Cover evidence is preserved and not verified (later stage) |
 | 11 | 2024-04-30T15:57:57+05:30 | Cover profiles remain in input order (later stage) |

@@ -13,3 +13,8 @@ class EvidenceTests(unittest.TestCase):
         self.assertEqual(result["matched_weight"], 5)
         self.assertEqual(result["total_weight"], 6)
         self.assertEqual(result["weighted_coverage_percent"], 83.33)
+
+    def test_aliases_match_canonical_requirement(self):
+        result = evaluate(self.data)["profiles"][1]
+        self.assertTrue(result["requirements"][2]["evidence_supplied"])
+        self.assertEqual(canonical(" SpringBoot "), "Spring Boot")
