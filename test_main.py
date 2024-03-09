@@ -18,3 +18,7 @@ class EvidenceTests(unittest.TestCase):
         result = evaluate(self.data)["profiles"][1]
         self.assertTrue(result["requirements"][2]["evidence_supplied"])
         self.assertEqual(canonical(" SpringBoot "), "Spring Boot")
+
+    def test_missing_required_evidence_is_explicit(self):
+        result = evaluate(self.data)["profiles"][1]
+        self.assertEqual(result["missing_required_evidence"], ["FastAPI"])
