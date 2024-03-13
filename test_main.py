@@ -22,3 +22,8 @@ class EvidenceTests(unittest.TestCase):
     def test_missing_required_evidence_is_explicit(self):
         result = evaluate(self.data)["profiles"][1]
         self.assertEqual(result["missing_required_evidence"], ["FastAPI"])
+
+    def test_evidence_is_preserved_and_not_verified(self):
+        result = evaluate(self.data)["profiles"][0]["requirements"][0]
+        self.assertEqual(result["evidence"][0], self.data["profiles"][0]["skills"][0]["evidence"])
+        self.assertEqual(result["verification"], "unverified supplied text")
