@@ -27,3 +27,7 @@ class EvidenceTests(unittest.TestCase):
         result = evaluate(self.data)["profiles"][0]["requirements"][0]
         self.assertEqual(result["evidence"][0], self.data["profiles"][0]["skills"][0]["evidence"])
         self.assertEqual(result["verification"], "unverified supplied text")
+
+    def test_profiles_remain_in_input_order(self):
+        self.data["profiles"].reverse()
+        self.assertEqual([p["profile_id"] for p in evaluate(self.data)["profiles"]], ["synthetic-profile-b","synthetic-profile-a"])
