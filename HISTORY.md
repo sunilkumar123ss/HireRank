@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 11 of 19. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 12 of 19. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -23,7 +23,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 9 | 2024-03-09T15:10:33+05:30 | Cover missing required evidence is explicit (present) |
 | 10 | 2024-03-13T18:41:33+05:30 | Cover evidence is preserved and not verified (present) |
 | 11 | 2024-04-30T15:57:57+05:30 | Cover profiles remain in input order (present) |
-| 12 | 2024-06-06T17:17:45+05:30 | Cover duplicate alias requirement rejected (later stage) |
+| 12 | 2024-06-06T17:17:45+05:30 | Cover duplicate alias requirement rejected (present) |
 | 13 | 2024-07-01T17:22:01+05:30 | Cover blank evidence and personal attributes not features (later stage) |
 | 14 | 2024-10-29T15:45:00+05:30 | Cover duplicate evidence does not inflate coverage (later stage) |
 | 15 | 2024-12-24T09:59:10+05:30 | Cover no evidence is zero coverage (later stage) |

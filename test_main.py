@@ -31,3 +31,7 @@ class EvidenceTests(unittest.TestCase):
     def test_profiles_remain_in_input_order(self):
         self.data["profiles"].reverse()
         self.assertEqual([p["profile_id"] for p in evaluate(self.data)["profiles"]], ["synthetic-profile-b","synthetic-profile-a"])
+
+    def test_duplicate_alias_requirement_rejected(self):
+        self.data["requirements"].append({"skill":"postgres","weight":1})
+        with self.assertRaises(ValueError): evaluate(self.data)
