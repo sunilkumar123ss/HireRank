@@ -35,3 +35,8 @@ class EvidenceTests(unittest.TestCase):
     def test_duplicate_alias_requirement_rejected(self):
         self.data["requirements"].append({"skill":"postgres","weight":1})
         with self.assertRaises(ValueError): evaluate(self.data)
+
+    def test_blank_evidence_and_personal_attributes_not_features(self):
+        self.data["profiles"][0]["skills"][0]["evidence"] = " "
+        with self.assertRaises(ValueError): evaluate(self.data)
+        with self.assertRaises(ValueError): canonical("age")
