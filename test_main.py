@@ -40,3 +40,8 @@ class EvidenceTests(unittest.TestCase):
         self.data["profiles"][0]["skills"][0]["evidence"] = " "
         with self.assertRaises(ValueError): evaluate(self.data)
         with self.assertRaises(ValueError): canonical("age")
+
+    def test_duplicate_evidence_does_not_inflate_coverage(self):
+        baseline = evaluate(self.data)
+        self.data["profiles"][0]["skills"].append(copy.deepcopy(self.data["profiles"][0]["skills"][0]))
+        self.assertEqual(evaluate(self.data), baseline)
