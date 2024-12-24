@@ -45,3 +45,10 @@ class EvidenceTests(unittest.TestCase):
         baseline = evaluate(self.data)
         self.data["profiles"][0]["skills"].append(copy.deepcopy(self.data["profiles"][0]["skills"][0]))
         self.assertEqual(evaluate(self.data), baseline)
+
+    def test_no_evidence_is_zero_coverage(self):
+        self.data["profiles"][0]["skills"] = []
+        self.assertEqual(evaluate(self.data)["profiles"][0]["weighted_coverage_percent"], 0)
+
+
+if __name__ == "__main__": unittest.main()
