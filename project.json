@@ -1,0 +1,8 @@
+{
+  "slug": "HireRank",
+  "title": "HireRank \u2014 Technical Evidence Explainer",
+  "description": "Transparent weighted coverage of supplied technical skill evidence, with missing-evidence explanations and no hiring decisions.",
+  "category": "cv",
+  "demo_args": [],
+  "expected_exit": 0
+}
